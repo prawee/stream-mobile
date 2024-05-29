@@ -11,6 +11,7 @@ rm -rf package-lock.json
 yarn
 ```
 
+## Linking repository
 ```bash
 rm -rf .git
 git init
@@ -20,8 +21,17 @@ git commit -m "initial commit and create project"
 git push -u origin master
 ```
 
+## Running first
 ```bash
 yarn start
 yarn ios
 yarn android
+```
+
+## Install Package
+
+### Chat
+```bash
+npx expo install stream-chat-expo stream-chat-react-native
+npx expo install @react-native-community/netinfo expo-file-system expo-image-manipulator expo-image-picker expo-media-library react-native-gesture-handler react-native-reanimated react-native-svg expo-clipboard
 ```
