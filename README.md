@@ -61,6 +61,3 @@ npx expo prebuild
 npx expo prebuild --clean
 npx expo start --clear
 ```
-
-## Reference
-<https://www.youtube.com/watch?v=8adaX330FdI>
