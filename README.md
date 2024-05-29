@@ -53,6 +53,14 @@ npx expo install expo-sharing
 ```bash
 yarn add  @gorhom/bottom-sheet
 ```
+### Dev Client
+```bash
+npx expo install expo-dev-client
+yarn start #ok
+npx expo prebuild
+npx expo prebuild --clean
+npx expo start --clear
+```
 
 ## Reference
 <https://www.youtube.com/watch?v=8adaX330FdI>
