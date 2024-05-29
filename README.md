@@ -17,4 +17,11 @@ git init
 git remote add origin https://github.com/prawee/stream-mobile.git
 git add .
 git commit -m "initial commit and create project"
+git push -u origin master
+```
+
+```bash
+yarn start
+yarn ios
+yarn android
 ```
