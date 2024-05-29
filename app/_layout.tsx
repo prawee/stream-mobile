@@ -1,9 +1,11 @@
 import 'react-native-gesture-handler';
-import { Slot } from 'expo-router';
+import { Slot, Stack } from 'expo-router';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 const InitialLayout = () => {
   return (
-    <Slot />
+    <Stack>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+    </Stack>
   )
 }
 
