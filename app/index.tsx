@@ -1,8 +1,10 @@
-import { Text, StyleSheet, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity, Button } from 'react-native'
+import { Text, StyleSheet, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity, Button, Dimensions } from 'react-native'
 import React, { useState } from 'react'
 import Spinner from 'react-native-loading-spinner-overlay';
 import Colors from '@/constants/Colors';
 
+const WIDTH = Dimensions.get('window').width;
+const HEIGHT = Dimensions.get('window').height;
 const Home = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
-        paddingHorizontal: '15%',
+        paddingHorizontal: WIDTH > HEIGHT ? '40%' : 20,
         justifyContent: 'center',
     },
     header: {
