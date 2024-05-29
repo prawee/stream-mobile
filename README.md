@@ -49,6 +49,10 @@ yarn add react-native-loading-spinner-overlay react-native-toast-message
 npx expo install expo-secure-store
 npx expo install expo-sharing
 ```
+### Bottom Sheet
+```bash
+yarn add  @gorhom/bottom-sheet
+```
 
 ## Reference
 <https://www.youtube.com/watch?v=8adaX330FdI>
