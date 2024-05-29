@@ -7,7 +7,8 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "clear": "watchman watch-del '/Users/prawee/code/projects/vms/stream-mobile' ; watchman watch-project '/Users/prawee/code/projects/vms/stream-mobile'"
   },
   "jest": {
     "preset": "jest-expo"
