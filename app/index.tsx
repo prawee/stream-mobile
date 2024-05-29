@@ -1,11 +1,18 @@
-import { View, Text, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native'
+import { Text, StyleSheet, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity, Button } from 'react-native'
 import React, { useState } from 'react'
 import Spinner from 'react-native-loading-spinner-overlay';
+import Colors from '@/constants/Colors';
 
 const Home = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
+
+    const onSignInPress = async () => {
+    };
+
+    const onSignUpPress = async () => {
+    };
 
     return (
         <KeyboardAvoidingView
@@ -17,7 +24,30 @@ const Home = () => {
                 textContent={'Loading...'}
                 textStyle={{ color: '#FFF' }}
             />
-            <Text>Home</Text>
+            <Text style={styles.header}>Video Calling</Text>
+            <Text style={styles.subHeader}>The fastest way to meet.</Text>
+            <TextInput
+                autoCapitalize="none"
+                placeholder="prawee@teohong.com"
+                value={email}
+                onChangeText={setEmail}
+                style={styles.inputField}
+            />
+            <TextInput
+                placeholder="password"
+                value={password}
+                onChangeText={setPassword}
+                secureTextEntry
+                style={styles.inputField}
+            />
+            <TouchableOpacity onPress={onSignInPress} style={styles.button}>
+                <Text style={{ color: '#fff'}}>Sign In</Text>
+            </TouchableOpacity>
+            <Button 
+                title="Don't have an account? Sign Up" 
+                onPress={onSignUpPress}
+                color={Colors.primary}
+            />
         </KeyboardAvoidingView>
     )
 }
@@ -26,7 +56,33 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
+        paddingHorizontal: '15%',
         justifyContent: 'center',
+    },
+    header: {
+        fontSize: 30,
+        textAlign: 'center',
+        marginBottom: 10
+    },
+    subHeader: {
+        fontSize: 18,
+        textAlign: 'center',
+        marginBottom: 40
+    },
+    inputField: {
+        marginVertical: 4,
+        height: 50,
+        borderWidth: 1,
+        borderColor: Colors.primary,
+        borderRadius: 4,
+        padding: 10
+    },
+    button: {
+        marginVertical: 15,
+        alignItems: 'center',
+        backgroundColor: Colors.primary,
+        padding: 12,
+        borderRadius: 4
     }
 });
 
