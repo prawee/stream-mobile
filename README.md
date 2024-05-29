@@ -35,7 +35,6 @@ yarn android
 npx expo install stream-chat-expo stream-chat-react-native
 npx expo install @react-native-community/netinfo expo-file-system expo-image-manipulator expo-image-picker expo-media-library react-native-gesture-handler react-native-reanimated react-native-svg expo-clipboard
 ```
-
 ### Live stream
 ```bash
 npx expo install @stream-io/video-react-native-sdk
@@ -44,3 +43,12 @@ npx expo install @config-plugins/react-native-webrtc
 npx expo install react-native-incall-manager
 npx expo install @notifee/react-native
 ```
+### Utils
+```bash
+yarn add react-native-loading-spinner-overlay react-native-toast-message
+npx expo install expo-secure-store
+npx expo install expo-sharing
+```
+
+## Reference
+<https://www.youtube.com/watch?v=8adaX330FdI>
