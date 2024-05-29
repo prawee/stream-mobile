@@ -2,6 +2,7 @@ import { Text, StyleSheet, KeyboardAvoidingView, Platform, TextInput, TouchableO
 import React, { useState } from 'react'
 import Spinner from 'react-native-loading-spinner-overlay';
 import Colors from '@/constants/Colors';
+import { useAuth } from '@/context/AuthContext';
 
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
@@ -9,6 +10,7 @@ const Home = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
+    const { onLogin, onRegister } = useAuth();
 
     const onSignInPress = async () => {
     };
