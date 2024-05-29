@@ -59,6 +59,7 @@ export const AuthProvider = ({ children }: any) => {
                 })
             });
             const json = await result.json();
+            // console.log('login ', json);
             if (json.token) {
                 await SecureStore.setItemAsync(TOKEN_KEY, JSON.stringify(json));
                 setAuthState({
@@ -89,6 +90,7 @@ export const AuthProvider = ({ children }: any) => {
                 })
             });
             const json = await result.json();
+            // console.log('register ', json);
             if (json.token) {
                 await SecureStore.setItemAsync(TOKEN_KEY, JSON.stringify(json));
                 setAuthState({

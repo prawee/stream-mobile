@@ -1,4 +1,4 @@
-import { Text, StyleSheet, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity, Button, Dimensions } from 'react-native'
+import { Text, StyleSheet, KeyboardAvoidingView, Platform, TextInput, TouchableOpacity, Button, Dimensions, Alert } from 'react-native'
 import React, { useState } from 'react'
 import Spinner from 'react-native-loading-spinner-overlay';
 import Colors from '@/constants/Colors';
@@ -13,9 +13,29 @@ const Home = () => {
     const { onLogin, onRegister } = useAuth();
 
     const onSignInPress = async () => {
+        setLoading(true);
+
+        try {
+            const result = await onLogin!(email, password);
+            console.log('onLogin ', result);
+        } catch (e) {
+            Alert.alert('Error', 'Could not login');
+        } finally {
+            setLoading(false);
+        }
     };
 
     const onSignUpPress = async () => {
+        setLoading(true);
+
+        try {
+            const result = await onRegister!(email, password);
+            console.log('onRegister ', result);
+        } catch (e) {
+            Alert.alert('Error', 'Could not register');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
